@@ -16,7 +16,7 @@ def create_reaction(header, react):
                         "code": f"{i[0]}",
                         "message_id": f"{i[1]}"
                     }
-                    url = "https://stage.api.pachca.com/api/v3/reactions"
+                    url = "https://api.pachca.com/api/v3/reactions"
                     reactions = requests.post(url, headers=cookie, json=body)
                     print(
                         f"Status : {reactions.status_code} {reactions.reason}, Time : {reactions.elapsed.total_seconds()}")
@@ -36,7 +36,7 @@ def delete_reaction(header, react):
                         "code": f"{i[0]}",
                         "message_id": f"{i[1]}"
                     }
-                    url = "https://stage.api.pachca.com/api/v3/reactions"
+                    url = "https://api.pachca.com/api/v3/reactions"
                     reactions = requests.delete(url, headers=cookie, json=body)
                     print(
                         f"Status : {reactions.status_code} {reactions.reason}, Time : {reactions.elapsed.total_seconds()}")
